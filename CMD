@@ -1,0 +1,9 @@
+netsh wlan show profile         -      'wifi profiles'
+
+netsh wlan show profile DANOOJ key=clear     -    DANOOJ = profile name. 
+
+systeminfo                            - pc info
+
+%tmp%                                 - temporary files
+
+tree C:\                                - tree list
